@@ -1,6 +1,5 @@
 package com.demo.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -50,8 +49,6 @@ public class User {
 
 
 	public User() {
-		this.requests = new ArrayList<>();
-		this.stages = new ArrayList<>();
 		this.id = UUID.randomUUID().toString();
 	}
 
