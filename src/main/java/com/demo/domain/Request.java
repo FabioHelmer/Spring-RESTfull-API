@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -24,7 +25,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@Entity(name = "request")
+@Entity
+@Table(name = "request")
 public class Request {
 
 	@Id
@@ -46,8 +48,8 @@ public class Request {
 	private RequestState state;
 
 	@ManyToOne
-	@JoinColumn(name = "id_user")
-	private User user;
+	@JoinColumn(name = "id_owner")
+	private User owner;
 
 	@OneToMany(mappedBy = "request")
 	private List<RequestStage> requestStages;

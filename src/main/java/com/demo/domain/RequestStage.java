@@ -10,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -22,7 +23,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@Entity(name = "request_stage")
+@Entity
+@Table(name = "request_stage")
 public class RequestStage {
 
 	@Id
@@ -45,8 +47,8 @@ public class RequestStage {
 	private Request request;
 
 	@ManyToOne
-	@JoinColumn(name = "id_user")
-	private User user; 
+	@JoinColumn(name = "id_owner")
+	private User owner;
 
 	public RequestStage() {
 		this.id = UUID.randomUUID().toString();
