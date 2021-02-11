@@ -54,4 +54,52 @@ public class RequestStage {
 		this.id = UUID.randomUUID().toString();
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Date getRealizationDate() {
+		return realizationDate;
+	}
+
+	public void setRealizationDate(Date realizationDate) {
+		this.realizationDate = realizationDate;
+	}
+
+	public RequestState getState() {
+		return state;
+	}
+
+	public void setState(RequestState state) {
+		this.state = state;
+	}
+
+	public Request getRequest() {
+		return request;
+	}
+
+	public void setRequest(Request request) {
+		this.request = request;
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+
 }

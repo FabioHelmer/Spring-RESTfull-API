@@ -17,6 +17,7 @@ public class SpringDemoRestApplication {
 //		
 //		System.out.println(user.toString());
 
+
 	}
 
 }

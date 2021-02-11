@@ -7,11 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.demo.domain.Request;
-import com.demo.domain.RequestStage;
 import com.demo.domain.enums.RequestState;
 
 @Repository
-public interface RequestRepository extends JpaRepository<RequestStage, String> {
+public interface RequestRepository extends JpaRepository<Request, String> {
 
 	public List<Request> findAllByOwnerId(String id);
 
