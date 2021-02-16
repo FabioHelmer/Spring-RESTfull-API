@@ -43,6 +43,11 @@ public class RequestService implements GenericService<Request, String> {
 		return results;
 	}
 
+	public List<Request> listAllByOwnerId(String id) {
+		List<Request> results = requestRepository.findAllByOwnerId(id);
+		return results;
+	}
+
 	@Override
 	public void delete(Request entity) {
 		requestRepository.delete(entity);
